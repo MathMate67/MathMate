@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #FBBF24;
+  color: #1e293b;
+}
+
+/* Subtle dotted grid backdrop */
+.bg-grid {
+  background-image: radial-gradient(rgba(139, 92, 246, 0.12) 1.4px, transparent 1.4px);
+  background-size: 22px 22px;
+}
