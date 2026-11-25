@@ -275,8 +275,8 @@ function Features({ onOpen }: { onOpen: OpenTool }) {
             return (
               <article
                 key={f.id}
-                id={f.id}
-                className={`group relative bg-white rounded-4xl border-2 ${a.ring} p-6 md:p-8 shadow-soft hover:shadow-card hover:-translate-y-1.5 transition-all duration-300 animate-fade-up`}
+                id={f.id === 'challenges' ? f.id : `feature-${f.id}`}
+                className={`group relative scroll-mt-24 bg-white rounded-4xl border-2 ${a.ring} p-6 md:p-8 shadow-soft hover:shadow-card hover:-translate-y-1.5 transition-all duration-300 animate-fade-up`}
                 style={{ animationDelay: `${i * 120}ms` }}
               >
                 <div className={`absolute -top-5 left-6 w-12 h-12 rounded-2xl ${a.bg} ${a.ring} border-2 flex items-center justify-center shadow-sm`}>
@@ -324,7 +324,7 @@ function DailyLifeMaths({ onOpen }: { onOpen: OpenTool }) {
   const [calcOpen, setCalcOpen] = useState(false);
 
   return (
-    <section id="daily-life" className="py-16 md:py-24 bg-gradient-to-b from-white to-amber-50/50">
+    <section id="daily-life" className="scroll-mt-16 py-16 md:py-24 bg-gradient-to-b from-white to-amber-50/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-brand-sand text-sm font-bold text-amber-600">
@@ -380,7 +380,7 @@ const LEARN_CARDS = [
 
 function LearningForEveryone({ onOpen }: { onOpen: OpenTool }) {
   return (
-    <section id="learning" className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section id="learning" className="scroll-mt-16 py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="absolute -left-20 top-1/3 w-72 h-72 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -right-20 bottom-10 w-72 h-72 bg-brand-lilac/15 rounded-full blur-3xl pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
